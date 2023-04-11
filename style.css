@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    width: 100%;
+    background: linear-gradient(to top, rgba(231, 228, 228, 0.5)50%,rgba(236, 230, 230, 0.5)50%),url(img.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.menubar{
+    background: rgb(221, 238, 73);
+    
+    text-align: center;
+}
+.menubar ul{
+    list-style: none;
+    color: brown;
+    display: inline-flex;
+    font-size: 20px;
+    
+
+}
+.menubar ul li{
+    width: 100%;
+    margin: 15px;
+    padding: 10px;
+    font-weight: bolder;
+}
