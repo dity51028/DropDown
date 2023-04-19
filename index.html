@@ -4,23 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drop-dowm Menu Design</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
 <body>
-    <div class="menubar">
-    <ul>
-        <li class="active"> <i class="fa-solid fa-house" aria-hidden="true"></i><a href="#">Home</a> </li>
-        <li> <a href="#">AboutUs</a> </li>
-        <li> <a href="#">Services</a> </li>
-        <li> <a href="#">Clients</a> </li>
-        <li> <a href="#">Investers</a> </li>
-        <li> <a href="#">Pricing</a> </li>
-        <li> <a href="#">Training</a> </li>
-        <li> <a href="#">Contact</a> </li>
-    </ul>
-</div>
-<ul>
+    
+
+    <header>
+        <a href="#" class="logo"> LOGO</a>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+
+        <nav class="navbar">
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li> <a href="#">Pages +</a> 
+                 <ul>
+                    <li><a href="#">Blogs</a></li>
+                    <li> <a href="#">Services +</a>
+                        <ul>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                        </ul>
+                    </li>
+                 </ul>
+            </li>
+             
+            <li><a href="#">Review</a></li>
+            <li> <a href="#">Gallery +</a>
+                <ul>
+                    <li><a href="#">Grid Gallery</a></li>
+                    <li><a href="#">Flex Gallery</a></li>
+                </ul>
+            </li>
+            <li><a href="#">contact</a></li>
+         </ul>
+    </nav>
+    </header>
 </body>
 </html>

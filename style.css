@@ -1,41 +1,120 @@
 *{
-    padding: 0;
-    margin: 0;
-
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
 }
 body{
-    width: 100%;
-    background: linear-gradient(to top, rgba(231, 228, 228, 0.5)50%,rgba(236, 230, 230, 0.5)50%),url(img.jpg);
-    background-position: center;
+    min-height: 100vh;
+    background: url(img.jpg)no-repeat;
     background-size: cover;
-    height: 100vh;
-    font-family: sans-serif;
+    background-position: center;
 }
-.menubar{
-    background: rgb(221, 238, 73);
-    
-    text-align: center;
-}
-.menubar ul{
-    list-style: none;
-    color: brown;
-    display: inline-flex;
-    font-size: 20px;
-    
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: floralwhite;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,.1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
 
 }
-.menubar ul li{
-    width: 100%;
-    margin: 15px;
-    padding: 10px;
-    font-weight: bold;
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+
 }
-.menubar ul li a 
+header .navbar ul
 {
-    text-decoration: none;
-    color: brown;
+    list-style: none;
+
 }
-.active, .menubar ul li:hover{
-    background: #2bab0d;
-    border-radius: 3px;
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
+header .navbar ul li a:hover{
+    background: #333;
+    color: antiquewhite;
+}
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: rgb(238, 204, 136);
+    display: none;
+
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0,.1);
+
+}
+header .navbar ul li ul li ul{
+    left: 200px;
+    top :0;
+}
+header .navbar ul li:focus-within >ul,
+header .navbar ul li:hover >ul{
+    display: initial;
+}
+
+
+#menu-bar{
+    display: none;
+}
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+    header{
+        padding:20px;
+    }
+    header label {
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left: 0;
+        right: 0;
+        background : #fff;
+        border-top: 1px solid rgba(0, 0, 0,.1); 
+        display: none;
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width:100%;
+    }
+    header .navbar ul li ul li{
+        background: #eee;
+
+    }
+    header .navbar ul li ul li ul{
+        width:100%;
+        left: 0;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
 }
